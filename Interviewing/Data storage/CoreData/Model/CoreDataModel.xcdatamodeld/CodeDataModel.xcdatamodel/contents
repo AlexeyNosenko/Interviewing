@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Duty" representedClassName=".Duty" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id_man" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="rlDuty_man" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Man" inverseName="rlMan_duty" inverseEntity="Man" syncable="YES"/>
+    </entity>
+    <entity name="Man" representedClassName=".Man" syncable="YES">
+        <attribute name="birthday" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="firstname" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastname" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <relationship name="rlMan_duty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Duty" inverseName="rlDuty_man" inverseEntity="Duty" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Man" positionX="-450" positionY="-18" width="128" height="133"/>
+        <element name="Duty" positionX="-720" positionY="20" width="128" height="103"/>
+    </elements>
+</model>
